@@ -23,4 +23,10 @@ Cinema.prototype.getFilmByGenre = function () {
 
 };
 
+Cinema.prototype.getFilmsByYear = function () {
+const filmTitles = this.films.filter(films => films.year === 2017);
+return filmTitles;
+
+};
+
 module.exports = Cinema;
