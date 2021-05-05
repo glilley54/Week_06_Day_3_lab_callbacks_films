@@ -28,9 +28,9 @@ describe('Cinema', function () {
     assert.deepStrictEqual(actual, films);
   });
 
-  it('should be able to get a list of film titles', function (films) {
-    const actual = films.titles;
-    assert.strictEqual(actual, cinema.filmTitles);
+  it('should be able to get a list of film titles', function () {
+    const expected = ['Moonlight', 'Blade Runner 2049','Dunkirk','Black Panther', 'T2 Trainspotting']
+    assert.deepStrictEqual(cinema.getFilmTitles(), expected);
 
 
   });

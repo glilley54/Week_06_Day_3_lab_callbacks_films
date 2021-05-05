@@ -2,12 +2,10 @@ const Cinema = function (films) {
   this.films = films;
 };
 
-module.exports = Cinema;
 
+Cinema.prototype.getFilmTitles = function() {
 
-const getFilmTitles = function(films) {
-
-const filmTitles =  films.filter(film => film.title);
+const filmTitles =  this.films.map(film => film.title);
 return filmTitles;
 };
 
