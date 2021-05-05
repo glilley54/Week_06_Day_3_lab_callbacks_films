@@ -29,4 +29,15 @@ return filmTitles;
 
 };
 
+Cinema.prototype.getNoFilmsByYear = function () {
+  const filmTitles = this.films.filter(films => films.year === 2019);
+  return filmTitles;
+  
+};
+
+Cinema.prototype.getFilmsForLength = function () {
+  const filmTitles = this.films.filter(films => films.length >112);
+  return filmTitles;
+};
+
 module.exports = Cinema;
