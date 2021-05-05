@@ -40,4 +40,9 @@ Cinema.prototype.getFilmsForLength = function () {
   return filmTitles;
 };
 
+Cinema.prototype.getTotalRunTimeAll = function () {
+  const filmLengths = this.films.reduce(films => films.length += films.length);
+    return filmLengths;
+};
+
 module.exports = Cinema;
