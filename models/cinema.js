@@ -4,15 +4,22 @@ const Cinema = function (films) {
 
 
 Cinema.prototype.getFilmTitles = function() {
-
 const filmTitles =  this.films.map(film => film.title);
 return filmTitles;
 };
 
 Cinema.prototype.getFilmByTitle = function() {
-
 const filmTitles = this.films.find(({title}) => title === 'Moonlight');
 return filmTitles;
+
+};
+
+
+Cinema.prototype.getFilmByGenre = function () {
+
+  const filmTitles = this.films.filter(films => films.genre === 'action');
+  return filmTitles;
+
 
 };
 
